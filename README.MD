@@ -1,6 +1,6 @@
-## SMS API
+## POPULATION MGT API
 
-This is an SMS MANAGEMENT APPLICATION API.
+This is an POPULATION MANAGEMENT APPLICATION API.
 It is built with node, express and mongodb as the database engine.
 
 ## steps for running this API
