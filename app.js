@@ -17,7 +17,7 @@ const swaggerDefinition = {
     info: {
         title: 'Population Management API',
         version: '1.0.0',
-        description: 'This is an Population management Application',
+        description: 'This is a Population management Application',
     },
     host: `localhost:3000`,
     basePath: '/api/v1',
