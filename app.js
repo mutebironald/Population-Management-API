@@ -15,9 +15,9 @@ const swaggerDefinition = {
 
       },
     info: {
-        title: 'SMS Management API',
+        title: 'Population Management API',
         version: '1.0.0',
-        description: 'This is an SMS management Application',
+        description: 'This is an Population management Application',
     },
     host: `localhost:3000`,
     basePath: '/api/v1',

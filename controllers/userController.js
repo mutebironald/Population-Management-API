@@ -45,7 +45,6 @@ module.exports = {
                 if(!user){ return res.status(500).json({ error: 'User not found' })}
                 const validPassword = user.passwordVerification(req.body.password)
                 if(!validPassword){ return res.status(500).json({ error: 'Invalid password' }); }
-                console.log(user, 'user object')
                 const token = jwt.sign({
                     user_id: user._id,
                     email: req.body.email

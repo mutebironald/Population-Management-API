@@ -14,7 +14,6 @@ var UserModelSchema = mongoose.Schema({
 
 //useful in password verification
 UserModelSchema.methods.passwordVerification = function(password){
-    console.log('password', password, 'this.password', this.password)
     return Bcrypt.compareSync(password, this.password);
 }
 
@@ -22,7 +21,6 @@ UserModelSchema.methods.passwordVerification = function(password){
 //validates emails 
 UserModelSchema.path('email').validate((email) => {
     var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    // console.log('hahahhaha', email)
     return emailRegex.test(email);
 }, 'The e-mail field cannot be empty.')
 
