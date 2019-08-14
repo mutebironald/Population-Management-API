@@ -5,13 +5,13 @@ It is built with node, express and mongodb as the database engine.
 
 ## steps for running this API
 - [x] clone the repository
-- [x] cd to the SMSAPI directory
+- [x] cd to the POP-MGT directory
 - [x] setup the env to have a similar outlook to the .env.example
 - [x] setup mongodb following this ##(mogo guide)[https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/]
 - [x] in one terminal run mongod, in another run npm start.
 - [x] open postman and test out the endpoints below.
 
-This is an SMS management API built with Node, Express and MongoDB.
+This is a Population management API built with Node, Express and MongoDB.
 The API is documented with ##(swagger) [https://swagger.io/]
 
 To use this API's documentation, you will have to
@@ -26,16 +26,16 @@ To use this API's documentation, you will have to
 
 It models the following abstractions
 
-## Contact:
+## User:
 
-- [x] name of person
-- [x] phone number of person
+- [x] email of the user
+- [x] password
 
-## SMS:
+## Location:
 
-- [x] person sending sms
-- [x] person receiving sms
-- [x] message of sms
-- [x] sms status
+- [x] name of the location
+- [x] number of male residents
+- [x] number of female residents
+- [x] total number of residents
 
 
