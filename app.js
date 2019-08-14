@@ -4,6 +4,35 @@ var cors = require('cors');
 var path = require('path');
 const jwt = require('jsonwebtoken')
 
+//swagger setup
+const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+
+const swaggerDefinition = {
+    swaggerOptions: {
+        validatorUrl: null,
+        explorer: true,
+
+      },
+    info: {
+        title: 'SMS Management API',
+        version: '1.0.0',
+        description: 'This is an SMS management Application',
+    },
+    host: `localhost:3000`,
+    basePath: '/api/v1',
+};
+
+const options = {
+    swaggerDefinition: swaggerDefinition,
+    apis: [
+        './routes/*.js', //a file with swagger specs written above each implementation 
+        ],
+};
+
+// initialize swaggerJSDoc generator (outputs swagger docs as JSON to variable)
+const specs = swaggerJsdoc(options);
+
 /**
  * configuration setup
  */
@@ -15,6 +44,8 @@ const config = require('./database');
 const conn = require('./database/database');
 
 conn.connect();
+
+
 
 /**
  * setting up the routes
@@ -38,6 +69,10 @@ app
 .get('/', (req, res) => {
     return res.send('This is a Population Management API, have fun with it')
 });
+
+
+// Server swagger at <apiurl>/docs using swagger-ui-express
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 //define  users route 
 app.use('/api/v1/users', userRouter);
