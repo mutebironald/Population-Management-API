@@ -38,4 +38,11 @@ It models the following abstractions
 - [x] number of female residents
 - [x] total number of residents
 
+# NB:
+* This API has been automated to send you a message when you raise a first issue or pull request on this repository.
+
+
+# Author
+* **Ronald Mutebi**
+
 
